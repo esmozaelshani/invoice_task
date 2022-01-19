@@ -1,0 +1,57 @@
+{
+  "id": null,
+  "name": null,
+  "products":[
+        {
+    "name": "Bottles of water",
+    "quantity": 240,
+    "price": 0.25,
+    "discount": 0,
+    "vat": 8,
+    "detail": "bottles of water"
+  },{
+    "name": "Bottles of wine",
+    "quantity": 18,
+    "price": 9.2,
+    "discount": 0.02,
+    "vat": 18,
+    "details": "Bottles of wine"
+  },
+    {
+    "name": "hand soap",
+    "quantity": 92,
+    "typeOfQuantity": "bottle",
+    "price": 3.78,
+    "discount": 0,
+    "vat": 8,
+    "details": "bottles of hand soap"
+  },
+  {
+    "name": "Fish meat",
+    "quantity": 49,
+    "typeOfQuantity": "kg",
+    "price": 8.3,
+    "discount": 0,
+    "vat": 18,
+    "details": "Fish meat"
+  },
+  {
+    "name": "package of humus",
+    "quantity": 16,
+    "typeOfQuantity": "package",
+    "price": 2.6,
+    "discount": 0,
+    "vat": 18,
+    "details": "package of humus"
+  }, 
+  {
+    "name": "Bananas",
+    "quantity": 8,
+    "price": 1.25,
+    "typeOfQuantity": "kg",
+    "discount": 0,
+    "vat": 22,
+    "details": "Bananas"
+  }
+]
+    }
