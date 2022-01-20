@@ -31,6 +31,7 @@ public class InvoiceService {
     }
 
     public List<InvoiceModel> generateInvoice(OrderModel orderModel) {
+        invoiceList.clear();
         products = orderModel.getProducts();
         calculatePrice();
         return invoiceList;
