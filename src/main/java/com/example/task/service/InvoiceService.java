@@ -47,7 +47,6 @@ public class InvoiceService {
 
             total = calculatedPrice(prd).get("total");
             tempAmount = tempAmount + calculatedPrice(prd).get("total");
-            int quantity = product.getQuantity();
             if (product.getPrice() > 500 && tempProducts.isEmpty()) {
                 ProductModel tempProduct = new ProductModel();
                 tempProduct.setName(product.getName());
@@ -55,10 +54,11 @@ public class InvoiceService {
                 tempProduct.setPrice(product.getPrice());
                 tempProduct.setDiscount(product.getDiscount());
                 tempProduct.setVat(product.getVat());
+                Product toEntityProduct = productMapper.toEntity(tempProduct);
                 tempProduct.setTotal(product.getTotal());
-                invoiceModel.setTotal(invoiceModel.getTotal() + total);
-                invoiceModel.setVat(invoiceModel.getVat() + calculatedPrice(productMapper.toEntity(product)).get("vat"));
-                invoiceModel.setSubtotal(invoiceModel.getSubtotal() + calculatedPrice(productMapper.toEntity(product)).get("subTotal"));
+                invoiceModel.setTotal(calculatedPrice(toEntityProduct).get("total"));
+                invoiceModel.setVat(calculatedPrice(toEntityProduct).get("vat"));
+                invoiceModel.setSubtotal(calculatedPrice(toEntityProduct).get("subTotal"));
                 tempProducts.add(tempProduct);
                 if (product.getQuantity() > 1) {
                     product.setQuantity(product.getQuantity() - 1);
