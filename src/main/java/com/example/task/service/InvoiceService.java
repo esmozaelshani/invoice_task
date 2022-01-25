@@ -48,7 +48,7 @@ public class InvoiceService {
 
             total = calculatedPrice(prd).get("total");
             tempAmount = tempAmount + calculatedPrice(prd).get("total");
-            if (product.getPrice() > 500 && tempProducts.isEmpty()) {
+            if ( total >= 500 && tempProducts.isEmpty()) {
                 ProductModel tempProduct = new ProductModel();
                 tempProduct.setName(product.getName());
                 tempProduct.setQuantity(1);
